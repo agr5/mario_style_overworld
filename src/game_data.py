@@ -1,6 +1,6 @@
 level_0 = {
-    'bg_palm':      'levels/0/level_0._bg_palm.csv',
-    'coin':         'levels/0/level_0._coin.csv',
+    'bg_palms':      'levels/0/level_0._bg_palm.csv',
+    'coins':         'levels/0/level_0._coin.csv',
     'constraints':  'levels/0/level_0._constraints.csv',
     'crates':       'levels/0/level_0._crates.csv',
     'enemies':      'levels/0/level_0._enemies.csv',
