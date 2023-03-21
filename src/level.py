@@ -96,15 +96,16 @@ class Level:
                             sprite = Coin(tile_size, x, y, r'graphics\coins\silver')
 
                     elif type == 'fg_palms':
+                        x += tile_size//2
                         if val == '0':
-                            sprite = Palm(tile_size, x, y, r'graphics\terrain\palm_small', 38)
+                            sprite = Palm(tile_size, x, y, r'graphics\terrain\palm_small', -20)
                         if val == '1':
-                            sprite = Palm(tile_size, x, y, r'graphics\terrain\palm_large', 64)
+                            sprite = Palm(tile_size, x, y, r'graphics\terrain\palm_large', 0)
                         if val == '2':
-                            sprite = Palm(tile_size, x, y, r'graphics\terrain\palm_bg', 64)
+                            sprite = Palm(tile_size, x, y, r'graphics\terrain\palm_bg', 0)
                     
                     elif type == 'bg_palms':
-                        sprite = Palm(tile_size, x, y, r'graphics\terrain\palm_bg', 64)
+                        sprite = Palm(tile_size, x, y, r'graphics\terrain\palm_bg', 0)
 
                     elif type == 'enemies':
                         sprite = Enemy(tile_size, x, y)
@@ -154,6 +155,7 @@ class Level:
             self.player_on_ground = True
         else:
             self.player_on_ground = False
+
 
     def create_landing_dust(self):
         if not self.player_on_ground and self.player.sprite.on_ground and not self.dust_sprite.sprites():
